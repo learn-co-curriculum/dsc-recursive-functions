@@ -128,7 +128,7 @@ sum
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-5-ac8531805475> in <module>()
+    <ipython-input-5-f1a29f127e30> in <module>()
           2 sum = 0
           3 for x in L:
     ----> 4     sum += x
@@ -206,7 +206,7 @@ def mysum(L, tot=0):
             #Notice we're digging in a layer here by iterating 
             #through i which we know is a nested data structure from our conditional
     if deeper_data != []:
-        return tot + mysum(deeper_data, tot=tot)
+        return mysum(deeper_data, tot=tot)
         #If we have deeper_data we got to iterate!
     else:
         return tot
@@ -224,7 +224,7 @@ mysum(L)
 
 
 
-    81
+    45
 
 
 
