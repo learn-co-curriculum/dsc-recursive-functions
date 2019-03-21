@@ -92,7 +92,7 @@ sum
 
 
 
-We could also use a fairly simple for loop:
+You could also use a fairly simple for loop:
 
 
 ```python
@@ -112,7 +112,7 @@ sum
 
 ## Handling More General Data Structures
 
-Let's pretend we want our mysum() function to sum nested lists, or arbitrary shape and depth. In other words, our list might contain numbers, lists of numbers, lists of lists of numbers, etc. If we want to write such a function, our simple while or for loop will no longer suffice. Observe:
+Imagine you want our mysum() function to sum nested lists, or arbitrary shape and depth. In other words, your list might contain numbers, lists of numbers, lists of lists of numbers, etc. If you want to write such a function, your simple while or for loop will no longer suffice. Observe:
 
 
 ```python
@@ -138,7 +138,7 @@ sum
     TypeError: unsupported operand type(s) for +=: 'int' and 'list'
 
 
-We get an error because when we try to add the second item, python is unable to add a int and a list; the two are seperate data types. Our recursive function however, does just as good a job by successively iterating through our nested data:
+You get an error because when you try to add the second item, python is unable to add a int and a list; the two are seperate data types. Your recursive function however, does just as good a job by successively iterating through our nested data:
 
 
 ```python
@@ -184,33 +184,33 @@ In general, recursive functions can also often be replaced with stacks which det
 
 ## More on Scopes
 
-Notice how we added a second branch in our conditional logic to further recurse on nested lists. You can also see how this works in practice by the print statements. Notice how the scope of L is redefined when we reach the second item at index 1; the nested list [2,3,4]. Once we reach that, we recurse to the mysum of this list and successively see printouts for [2,3,4], [3,4]], [4] and [] as the mysum() function sums this list within our master list.
+Notice how you can add a second branch in the conditional logic to further recurse on nested lists. You can also see how this works in practice by the print statements. The scope of L is redefined when the function then reaches the second item at index 1; the nested list [2,3,4]. Once there, the function makes a recursive call to the mysum function of this smaller list and successively see printouts for [2,3,4], [3,4]], [4] and [] as the mysum() function continues to sum this list within the master list.
 
 ## Depth Vs. Breadth First Traversals
 
-Another important concept to touch upon and address at this point is the difference between depth and breadth first search trees. In our above example, we have searched in a depth first approach; when we hit the second item which was a nested list, we continued all the way down the rabbit hole before moving on. A depth first search would be if we processed everything at the first level, putting nested lists on hold till later. Here's the same function rewritten as a breadth first traversal:
+Another important concept to touch upon and address at this point is the difference between depth and breadth first search trees. The above example demonstrates depth first approach; when mysum hit the second item which was a nested list, it continued all the way down the rabbit hole before moving on. A depth first search would be if the function processed everything at the first level, putting nested lists on hold till later. Here's the same function rewritten as a breadth first traversal:
 
 
 ```python
-#We want to process everything layer by layer. 
-#Thus we process everything in the list, and put off items for later processing if they are nested data structures.
+#Process everything layer by layer. 
+#Thus you process everything in the list, and put off items for later processing if they are nested data structures.
 def mysum(L, tot=0):
     print(L)
-    deeper_data = [] #Initialize a container for nested data we come across
+    deeper_data = [] #Initialize a container for nested data you come across
     #Process the current depth layer
     for i in L:
         if type(i) != list:
             tot += i #If its not a list, its a number! Add it up!
         else:
             [deeper_data.append(j) for j in i] #Add nested items to our list of things to process later on
-            #Notice we're digging in a layer here by iterating 
-            #through i which we know is a nested data structure from our conditional
+            #Notice you're digging in a layer here by iterating 
+            #through i which you know is a nested data structure from our conditional
     if deeper_data != []:
         return mysum(deeper_data, tot=tot)
-        #If we have deeper_data we got to iterate!
+        #If you have deeper_data we got to iterate!
     else:
         return tot
-        #If we don't have nested data, we're done!
+        #If you don't have nested data, we're done!
     
 L = [1,[2,3,4],5,[6,[7,8],9]]
 mysum(L)
