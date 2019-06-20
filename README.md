@@ -128,7 +128,7 @@ sum
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-5-f1a29f127e30> in <module>()
+    <ipython-input-5-ac8531805475> in <module>()
           2 sum = 0
           3 for x in L:
     ----> 4     sum += x
@@ -188,7 +188,7 @@ Notice how you can add a second branch in the conditional logic to further recur
 
 ## Depth Vs. Breadth First Traversals
 
-Another important concept to touch upon and address at this point is the difference between depth and breadth first search trees. The above example demonstrates depth first approach; when mysum hit the second item which was a nested list, it continued all the way down the rabbit hole before moving on. A depth first search would be if the function processed everything at the first level, putting nested lists on hold till later. Here's the same function rewritten as a breadth first traversal:
+Another important concept to touch upon and address at this point is the difference between depth and breadth first search trees. The above example demonstrates depth first approach; when mysum hit the second item which was a nested list, it continued all the way down the rabbit hole before moving on. A breadth first search would be if the function processed everything at the first level, putting nested lists on hold till later. Here's the same function rewritten as a breadth first traversal:
 
 
 ```python
