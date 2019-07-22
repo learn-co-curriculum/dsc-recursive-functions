@@ -78,11 +78,11 @@ In this case, a summation problem could be easily replaced by using a while loop
 
 ```python
 L = [1,2,3,4,5,6,7,8,9]
-sum = 0 
+sum_1 = 0 
 while L:
-    sum += L[0]
+    sum_1 += L[0]
     L = L[1:]
-sum
+sum_1
 ```
 
 
@@ -97,10 +97,10 @@ You could also use a fairly simple for loop:
 
 ```python
 L = [1,2,3,4,5,6,7,8,9]
-sum = 0 
+sum_1 = 0 
 for x in L:
-    sum += x
-sum
+    sum_1 += x
+sum_1
 ```
 
 
@@ -117,10 +117,10 @@ Imagine you want our mysum() function to sum nested lists, or arbitrary shape an
 
 ```python
 L = [1,[2,3,4],5,[6,[7,8],9]]
-sum = 0 
+sum_1 = 0 
 for x in L:
-    sum += x
-sum
+    sum_1 += x
+sum_1
 ```
 
 
@@ -128,11 +128,11 @@ sum
 
     TypeError                                 Traceback (most recent call last)
 
-    <ipython-input-5-ac8531805475> in <module>()
-          2 sum = 0
+    <ipython-input-5-69d60388f646> in <module>()
+          2 sum_1 = 0
           3 for x in L:
-    ----> 4     sum += x
-          5 sum
+    ----> 4     sum_1 += x
+          5 sum_1
 
 
     TypeError: unsupported operand type(s) for +=: 'int' and 'list'
@@ -235,4 +235,4 @@ Check out the link below for a further discussion about depth versus breadth fir
 https://brilliant.org/wiki/depth-first-search-dfs/
 
 ## Summary
-Recursive functions make calls to themselves. Each call defines new scopes for variables and functions within these recursive calls. While useful for traversing unknown data structures, standard `for` and `while` loops will have faster execution times when .
+Recursive functions make calls to themselves. Each call defines new scopes for variables and functions within these recursive calls. Although recursive functions are useful for traversing unknown data structures, usually standard `for` and `while` loops will have faster execution. Execution time and readability are important to consider whenever you decide to write a recursive function. Now it's time for you to practice and write some recursive functions on your own!
