@@ -73,7 +73,7 @@ Each new call to your function creates a new local scope. In other words, this c
 
 ## Alternatives
 
-In this case, a summation problem could be easily replaced by using a while loop. This eliminates the need to define function that then makes recursive calls to itself (which creates new scopes). In practice, this can also increase execution performance time.
+In this case, a summation problem could be easily replaced by using a while loop. This eliminates the need to define a function that then makes recursive calls to itself (which creates new scopes). In practice, this can also increase execution performance time.
 
 
 ```python
@@ -138,7 +138,7 @@ sum_1
     TypeError: unsupported operand type(s) for +=: 'int' and 'list'
 
 
-You get an error because when you try to add the second item, python is unable to add a int and a list; the two are seperate data types. Your recursive function however, does just as good a job by successively iterating through our nested data:
+You get an error because when you try to add the second item, python is unable to add an int and a list; the two are separate data types. Your recursive function, however, does just as good a job by successively iterating through our nested data:
 
 
 ```python
@@ -180,7 +180,7 @@ mysum(L)
 
 
 
-In general, recursive functions can also often be replaced with stacks which determine a queue for successive function calls. See the resources below which adds some more context on this.
+In general, recursive functions can also often be replaced with stacks that determine a queue for successive function calls. See the resources below which adds some more context on this.
 
 ## More on Scopes
 
