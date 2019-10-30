@@ -8,9 +8,11 @@ Recursion is an advanced and somewhat uncommon practice in Python as other loopi
 
 ## Objectives
 You will be able to:
-* Understand and use the concept of a recursive function 
-* Understand scope in the context of recursive functions
-* Understand and compare depth first versus breadth first searches
+
+* Describe the concept of a recursive function
+* Create a recursive function
+* Demonstrate how local scope changes with recursive functions
+* Compare depth first versus breadth first searches
 
 ## A Recursive Example
 
